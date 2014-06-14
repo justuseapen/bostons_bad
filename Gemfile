@@ -40,8 +40,8 @@ group :development, :test do
 end
 
 gem 'httparty'
-gem 'simple_form'
 gem 'clearance'
+gem 'foundation-rails'
 
 
 # Use ActiveModel has_secure_password

@@ -12,4 +12,11 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+
+body{
+	background-color:#0F0F0F;
+	color: white;
+}
