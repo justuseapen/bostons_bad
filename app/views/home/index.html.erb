@@ -1,6 +1,8 @@
 <h1>#BostonsBad</h1>
-<% @instagram.each do |instagram| %>
-
-<%= image_tag instagram.images.standard_resolution.url %>
-
+<% @posts.each do |post| %>
+	
+	<%= image_tag(post.image_url) %>
+	<p><%= post.caption %></p>
+	<p>Submitted by: <%= link_to "#{post.submitted_by}","http://instagram.com/#{post.submitted_by}" %> </p>
+	<br>
 <% end %>

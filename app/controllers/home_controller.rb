@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @featured_instagrams = Instagram.user_recent_media("1350874038", {:count => 1})
+  	Post.populate
+  	@posts = Post.where(active: true)
   end
 end
