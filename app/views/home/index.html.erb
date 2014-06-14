@@ -1,7 +1,7 @@
 <h1 class="title">#BostonsBad</h1>
 <% @posts.each do |post| %>
 	
-	<%= image_tag(post.image_url) %>
+	<%= image_tag(post.image_url, class: "instagram") %>
 	<p><%= post.caption %></p>
 	<p>Submitted by: <%= link_to "#{post.submitted_by}","http://instagram.com/#{post.submitted_by}" %> </p>
 	<br>

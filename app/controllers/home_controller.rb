@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-  	Post.populate
+  	Post.check_for_new
   	@posts = Post.where(active: true)
   end
 end
