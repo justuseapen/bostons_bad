@@ -14,7 +14,7 @@ class Post < ActiveRecord::Base
 				PostAcceptanceMailer.acceptance_mailer(post).deliver if post.save
 			end
 		else
-			redirect_to root_path
+			redirect_to '/'
 		end
 		Post.all
   end	
