@@ -42,6 +42,7 @@ end
 gem 'httparty'
 gem 'clearance'
 gem 'foundation-rails'
+gem 'rails_12factor', group: :production
 
 
 # Use ActiveModel has_secure_password
