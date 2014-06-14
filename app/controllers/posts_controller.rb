@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+	before_filter :authorize, only: [:accept]
+
 	def new
 		@post = Post.new
 	end
@@ -6,6 +8,16 @@ class PostsController < ApplicationController
 	def create
 		@post = Post.find(post_params)
 		@post.save
+	end
+
+	def accept
+		@post = Post.find(params[:id])
+		if current_user.admin
+			@post.activate
+			redirect_to root_path
+		else
+			redirect_to sign_in_path
+		end
 	end
 
 	private
