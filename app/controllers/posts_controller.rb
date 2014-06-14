@@ -1,6 +1,4 @@
 class PostsController < ApplicationController
-	before_filter :authorize, only: [:accept]
-
 	def new
 		@post = Post.new
 	end
