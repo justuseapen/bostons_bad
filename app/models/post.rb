@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
 	validates :image_url, uniqueness: true
+	scope :active_posts, -> { where(active: true).order(created_at: :desc) }
 
 	def activate
 		self.active = true
